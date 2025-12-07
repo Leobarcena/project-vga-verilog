@@ -7,12 +7,22 @@ categories: demo
 
 For this project I worked with an already made VGA design in Vivado. The original design showed different coloured stripes, and the goal was to modify it into something more detailed. I wanted to make my own image on the screen and actually control where each pixel goes. After I understood how the template worked, I added my own shapes to display a small scene with a ground, sky, tree and a cow that I created from coordinates.
 
-## **Template VGA Design**
-<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251111_140059.jpg">
 ### **Project Set-Up**
-Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph.
+The project ran on an Artix-7 based FPGA connected to a VGA monitor. The screen resolution was 640×480, controlled by a VGA synchronization module. The given project already had:
 
-<img src="https://raw.githubusercontent.com/Leobarcena/project-vga-verilog/tree/main/docs/assets/images/VGAPrjSum.png">
+a VGA timing module
+
+a colour generator file
+
+a testbench
+
+device constraints
+
+I programmed the FPGA through Vivado, connected the VGA cable to a monitor and verified the output.
+
+Here is what the original display looked like before I edited anything:
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251111_140059.jpg">
+
 ### **Template Code**
 Outline the structure and design of the Verilog code templates you were given. What do they do? Include reference to how a VGA interface works. Guideline: 2/3 short paragraphs, consider including screenshot(s).
 ### **Simulation**
