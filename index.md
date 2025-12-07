@@ -8,7 +8,7 @@ categories: demo
 For this project I worked with an already made VGA design in Vivado. The original design showed different coloured stripes, and the goal was to modify it into something more detailed. I wanted to make my own image on the screen and actually control where each pixel goes. After I understood how the template worked, I added my own shapes to display a small scene with a ground, sky, tree and a cow that I created from coordinates.
 
 ## **Template VGA Design**
-<img src="https://raw.githubusercontent.com/Leobarcena/project-vga-verilog/tree/main/docs/assets/images/20251111_140059.jpg">
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251111_140059.jpg">
 ### **Project Set-Up**
 Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph.
 
