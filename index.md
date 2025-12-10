@@ -24,7 +24,15 @@ Here is what the original display looked like before I edited anything:
 <img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251111_140059.jpg">
 
 ### **Template Code**
-Outline the structure and design of the Verilog code templates you were given. What do they do? Include reference to how a VGA interface works. Guideline: 2/3 short paragraphs, consider including screenshot(s).
+The original template worked by checking the current row and col values of the pixel. Based on where the pixel was located, the code selected a colour. So any time a pixel fell inside a certain area, it would change to that assigned RGB value.
+
+if(col > X && col < Y && row > A && row < B)
+
+<img src="https://github.com/Leobarcena/docs/assets/images/image-1762871491130.jpg">
+
+At that stage nothing crazy was happening, just solid blocks of colour, but it gave me a good understanding of how the VGA mapping actually works.
+
+That is why the original screen just showed stripes — each stripe was simply controlled by:
 ### **Simulation**
 Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
 ### **Synthesis**
