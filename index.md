@@ -30,7 +30,7 @@ The original template worked by checking the current row and col values of the p
 
 That is why the original screen just showed stripes — each stripe was simply controlled by:
 
-**if(col >= X && col <= Y)**
+`if(col >= X && col <= Y)`
 
 At that stage nothing fancy was happening, just solid blocks of colour, but it gave me a good understanding of how the VGA mapping actually works.
 
@@ -65,15 +65,78 @@ Here is what the original output looked like:
 <img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251111_140059.jpg">
 
 ## **My VGA Design Edit**
-Introduce your own design idea. Consider how complex/achievabble this might be or otherwise. Reference any research you do online (use hyperlinks).
+## Design Overview
+
+After testing the original version, I replaced the stripes with a more interesting scene. I created:
+
+a grassy ground
+a sky
+a tree (leaves + trunk)
+a yellow rectangle (sun) on the right
+and a pixel-style cow
+
+I drew the cow on squared paper first so I could turn each square into coordinate ranges.
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251125_153711.jpg">
+
+I positioned everything based on the 640×480 grid. For example, the ground is basically:
+
+ `if(col >= 11'd0 && col < 11'd640 && row >= 11'd340 && row < 11'd480) begin // green ground
+      red_next   <= 4'b0000;
+      green_next <= 4'b1111;
+      blue_next  <= 4'b0000;
+   end`
+
+which colours the full area across the bottom.
+
 ### **Code Adaptation**
-Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
+Instead of colouring full sections with vertical stripes, first thing I did was try to get some horizontal lines. 
+
+Original code had the vertical lines like this: `col >= 200 && col < 320`
+I added the horizontal lines by adding some extra lines. `row >= 180 && row < 260`
+looked like this after it was done.`col >= 11'd0 && col < 11'd640 && row >= 11'd340 && row < 11'd480`
+
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251111_140008.jpg">
+
+Next step was to make a sky and ground, which was easier than the step above. 
+Adding a tree and the sun were the next step after that.
+
+stacking small rectangles. For example:
+`col >= 200 && col < 320`
+`row >= 180 && row < 260`
+creates the top of the tree.
+The same style of code but different coordinates made the trunk and sun.
+
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251111_152622.jpg">
+
+The cow was made with around 10 separate rectangles, all white, and positioned so they align to make a small cow shape. I basically highlighted small rectangular blocks and layered them so the face, chin and ears formed properly.
+
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/Snapchat-676494236.jpg">
+
+The important thing was to place all cow blocks above the default sky condition so the background wouldn’t overwrite them.
+
 ### **Simulation**
-Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
+When I simulated my updated design, the RGB signals changed exactly where I expected. This confirmed that my coordinate values and conditions were correct and that the shapes would appear properly on hardware.
+
+The overall timing and sync behaviour stayed the same, which means I didn’t break anything structurally.
 ### **Synthesis**
-Describe the synthesis & implementation outputs for your design, are there any differences to that of the original design? Guideline 1-2 short paragraphs.
+There was basically no difference in terms of resources. It is still just combinational comparisons, so Vivado handled it easily.
+Warnings were the same as before and the design still met timing.
 ### **Demonstration**
-If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
+Once I ran the bitstream to hardware again, the full scene appeared:
+
+✔ ground at the bottom
+✔ tree in the middle
+✔ yellow block on the right
+✔ cow drawn using rectangles
+
+Everything lined up correctly and stayed displayed without flickering.
+This confirmed that all my coordinate planning and code changes were correct.
+
+## Conclusion
+
+Before modifying anything, I first understood how the VGA template worked. Then I took the same logic but used more detailed coordinate ranges so I could build shapes instead of stripes. Drawing the cow in my copybook first made placement much easier because I could visually plan the rectangles.
+
+Overall, this helped me understand how VGA timing interacts with pixel positioning and how to make custom graphics manually. Seeing the design actually appear on the monitor was satisfying because I could directly see the result of the code I wrote.
 
 ## **More Markdown Basics**
 This is a paragraph. Add an empty line to start a new paragraph.
