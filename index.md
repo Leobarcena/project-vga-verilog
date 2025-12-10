@@ -53,9 +53,15 @@ The waveform basically confirmed the whole pipeline before even touching the rea
 
 
 ### **Synthesis**
-Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
+The design synthesized successfully. The warnings that appeared weren’t serious — mainly unused bits in the reset signals. Nothing affected the actual output.
+
+Resource usage stayed very small, since most of the logic was comparisons and simple assignments. Timing also passed, meaning the design was running stable at VGA speed.
+
 ### **Demonstration**
-Perhaps add a picture of your demo. Guideline: 1/2 sentences.
+After programming the FPGA, I connected it to a normal monitor and saw the stripes exactly as expected. The display was clean and stable and there was no flicker, so at that point I knew the template worked.
+
+Here is what the original output looked like: I had forgotten to take a picture of my screen at the time I got the demo working. This picture I have demonstrated is from one of my class mates. 
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251111_140059.jpg">
 
 ## **My VGA Design Edit**
 Introduce your own design idea. Consider how complex/achievabble this might be or otherwise. Reference any research you do online (use hyperlinks).
