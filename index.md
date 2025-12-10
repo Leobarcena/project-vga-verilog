@@ -28,11 +28,30 @@ The original template worked by checking the current row and col values of the p
 <img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/image-1762871491130.jpg">
 
 That is why the original screen just showed stripes — each stripe was simply controlled by:
-**if(col > X && col < Y)**
+
+**if(col >= X && col <= Y)**
+
 At that stage nothing fancy was happening, just solid blocks of colour, but it gave me a good understanding of how the VGA mapping actually works.
 
 ### **Simulation**
-Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
+I ran the behavioural simulation first to make sure everything was working before flashing the FPGA. In the simulator I could clearly see:
+
+hsync pulses happening across each row
+
+vsync changing once per full refresh
+
+col values counting up to 639
+
+row counting up to 479
+
+And the RGB values changed exactly when the coordinates entered certain areas.
+This already showed that the timing and colour selection was correct.
+
+The waveform basically confirmed the whole pipeline before even touching the real hardware.
+
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251202_135657.jpg">
+
+
 ### **Synthesis**
 Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
 ### **Demonstration**
