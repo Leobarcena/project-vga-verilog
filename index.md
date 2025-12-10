@@ -25,13 +25,12 @@ Here is what the original display looked like before I edited anything:
 
 ### **Template Code**
 The original template worked by checking the current row and col values of the pixel. Based on where the pixel was located, the code selected a colour. So any time a pixel fell inside a certain area, it would change to that assigned RGB value.
-
-if(col > X && col < Y && row > A && row < B)
-
 <img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/image-1762871491130.jpg">
-At that stage nothing crazy was happening, just solid blocks of colour, but it gave me a good understanding of how the VGA mapping actually works.
 
 That is why the original screen just showed stripes — each stripe was simply controlled by:
+**if(col > X && col < Y)**
+At that stage nothing fancy was happening, just solid blocks of colour, but it gave me a good understanding of how the VGA mapping actually works.
+
 ### **Simulation**
 Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
 ### **Synthesis**
