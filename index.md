@@ -28,8 +28,7 @@ The original template worked by checking the current row and col values of the p
 
 if(col > X && col < Y && row > A && row < B)
 
-<img src="https://github.com/Leobarcena/project-vga-verilog/docs/assets/images/image-1762871491130.jpg">
-
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/image-1762871491130.jpgg">
 At that stage nothing crazy was happening, just solid blocks of colour, but it gave me a good understanding of how the VGA mapping actually works.
 
 That is why the original screen just showed stripes — each stripe was simply controlled by:
