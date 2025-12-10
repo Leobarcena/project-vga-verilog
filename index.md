@@ -21,6 +21,7 @@ device constraints
 I programmed the FPGA through Vivado, connected the VGA cable to a monitor and verified the output.
 
 Here is what the original display looked like before I edited anything:
+I had forgotten to take a picture of my screen at the time I got the demo working. This picture I have demonstrated is from one of my class mates.
 <img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251111_140059.jpg">
 
 ### **Template Code**
@@ -60,7 +61,7 @@ Resource usage stayed very small, since most of the logic was comparisons and si
 ### **Demonstration**
 After programming the FPGA, I connected it to a normal monitor and saw the stripes exactly as expected. The display was clean and stable and there was no flicker, so at that point I knew the template worked.
 
-Here is what the original output looked like: I had forgotten to take a picture of my screen at the time I got the demo working. This picture I have demonstrated is from one of my class mates. 
+Here is what the original output looked like: 
 <img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251111_140059.jpg">
 
 ## **My VGA Design Edit**
