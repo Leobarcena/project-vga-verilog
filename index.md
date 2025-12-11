@@ -10,13 +10,13 @@ For this project I worked with an already made VGA design in Vivado. The origina
 ### **Project Set-Up**
 The project ran on an Artix-7 based FPGA connected to a VGA monitor. The screen resolution was 640×480, controlled by a VGA synchronization module. The given project already had:
 
-a VGA timing module
+- a VGA timing module
 
-a colour generator file
+- a colour generator file
 
-a testbench
+- a testbench
 
-device constraints
+- device constraints
 
 I programmed the FPGA through Vivado, connected the VGA cable to a monitor and verified the output.
 
@@ -37,13 +37,13 @@ At that stage nothing fancy was happening, just solid blocks of colour, but it g
 ### **Simulation**
 I ran the behavioural simulation first to make sure everything was working before flashing the FPGA. In the simulator I could clearly see:
 
-hsync pulses happening across each row
+- hsync pulses happening across each row
 
-vsync changing once per full refresh
+- vsync changing once per full refresh
 
-col values counting up to 639
+- col values counting up to 639
 
-row counting up to 479
+- row counting up to 479
 
 And the RGB values changed exactly when the coordinates entered certain areas.
 This already showed that the timing and colour selection was correct.
@@ -69,11 +69,11 @@ Here is what the original output looked like:
 
 After testing the original version, I replaced the stripes with a more interesting scene. I created:
 
-a grassy ground
-a sky
-a tree (leaves + trunk)
-a yellow rectangle (sun) on the right
-and a pixel-style cow
+- a grassy ground
+- a sky
+- a tree (leaves + trunk)
+- a yellow rectangle (sun) on the right
+- and a pixel-style cow
 
 I drew the cow on squared paper first so I could turn each square into coordinate ranges.
 <img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251125_153711.jpg">
@@ -124,13 +124,15 @@ Warnings were the same as before and the design still met timing.
 ### **Demonstration**
 Once I ran the bitstream to hardware again, the full scene appeared:
 
-✔ ground at the bottom
-✔ tree in the middle
-✔ yellow block on the right
-✔ cow drawn using rectangles
+- ground at the bottom
+- tree in the middle
+- yellow block on the right
+- cow drawn using rectangles
 
 Everything lined up correctly and stayed displayed without flickering.
 This confirmed that all my coordinate planning and code changes were correct.
+
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251202_151748.jpg">
 
 ## Conclusion
 
