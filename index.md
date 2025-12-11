@@ -18,6 +18,8 @@ The project ran on an Artix-7 based FPGA connected to a VGA monitor. The screen 
 
 - device constraints
 
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/Screenshot 2025-12-02 152533 overall.png">
+
 I programmed the FPGA through Vivado, connected the VGA cable to a monitor and verified the output.
 
 Here is what the original display looked like before I edited anything:
@@ -26,6 +28,7 @@ I had forgotten to take a picture of my screen at the time I got the demo workin
 
 ### **Template Code**
 The original template worked by checking the current row and col values of the pixel. Based on where the pixel was located, the code selected a colour. So any time a pixel fell inside a certain area, it would change to that assigned RGB value.
+This image I have provided has some part of the original code at the bottom that I have commented out as an example.
 <img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/image-1762871491130.jpg">
 
 That is why the original screen just showed stripes — each stripe was simply controlled by:
@@ -57,6 +60,9 @@ The waveform basically confirmed the whole pipeline before even touching the rea
 The design synthesized successfully. The warnings that appeared weren’t serious — mainly unused bits in the reset signals. Nothing affected the actual output.
 
 Resource usage stayed very small, since most of the logic was comparisons and simple assignments. Timing also passed, meaning the design was running stable at VGA speed.
+
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/Screenshot 2025-12-02 152108 Summary.png
+">
 
 ### **Demonstration**
 After programming the FPGA, I connected it to a normal monitor and saw the stripes exactly as expected. The display was clean and stable and there was no flicker, so at that point I knew the template worked.
