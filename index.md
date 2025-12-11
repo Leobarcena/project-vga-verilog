@@ -24,11 +24,13 @@ I programmed the FPGA through Vivado, connected the VGA cable to a monitor and v
 
 Here is what the original display looked like before I edited anything:
 I had forgotten to take a picture of my screen at the time I got the demo working. This picture I have demonstrated is from one of my class mates.
+
 <img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251111_140059.jpg">
 
 ### **Template Code**
 The original template worked by checking the current row and col values of the pixel. Based on where the pixel was located, the code selected a colour. So any time a pixel fell inside a certain area, it would change to that assigned RGB value.
 This image I have provided has some part of the original code at the bottom that I have commented out as an example.
+
 <img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/image-1762871491130.jpg">
 
 That is why the original screen just showed stripes — each stripe was simply controlled by:
