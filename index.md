@@ -63,8 +63,7 @@ The design synthesized successfully. The warnings that appeared weren’t seriou
 
 Resource usage stayed very small, since most of the logic was comparisons and simple assignments. Timing also passed, meaning the design was running stable at VGA speed.
 
-<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/Screenshot 2025-12-02 152108 Summary.png
-">
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/Screenshot 2025-12-02 152108 Summary.png">
 
 ### **Demonstration**
 After programming the FPGA, I connected it to a normal monitor and saw the stripes exactly as expected. The display was clean and stable and there was no flicker, so at that point I knew the template worked.
