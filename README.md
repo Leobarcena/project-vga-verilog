@@ -37,10 +37,7 @@ FPGA → VGA Signal Generation → Monitor Display
 
 ## 🖥 Output Example
 
-(Add an image here if you have one)
-
-Example:
-![VGA Output](docs/assets/images/your_image.png)
+<img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/20251111_140059.jpg">
 
 ---
 
