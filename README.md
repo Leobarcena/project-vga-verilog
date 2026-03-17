@@ -6,6 +6,14 @@ The system generates video signals to display custom graphics on a 640×480 VGA 
 
 ---
 
+## 📄 Project Documentation
+
+A full breakdown of the design process, including VGA signal generation, pixel mapping, and step-by-step development:
+
+[▶ View Full Project Report](https://leobarcena.github.io/project-vga-verilog/)
+
+---
+
 ## 🧠 Overview
 
 The project uses digital logic to control VGA timing signals and display graphical content by assigning colors to specific pixel coordinates.
