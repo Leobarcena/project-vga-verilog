@@ -20,6 +20,7 @@ The project ran on an Artix-7 based FPGA connected to a VGA monitor. The screen 
 - device constraints
 
 <img src="https://github.com/Leobarcena/project-vga-verilog/blob/main/docs/assets/images/Screenshot 2025-12-02 152533 overall.png">
+<img src="https://raw.githubusercontent.com/Leobarcena/project-vga-verilog/main/docs/assets/images/Screenshot%202025-12-02%20152533%20overall.png">
 
 I programmed the FPGA through Vivado, connected the VGA cable to a monitor and verified the output.
 
